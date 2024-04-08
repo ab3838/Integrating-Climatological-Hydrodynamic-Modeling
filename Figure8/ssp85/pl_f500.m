@@ -3,18 +3,16 @@ close all
 clc
 
 
-
-
-load('s_100.mat');
+load('s_500.mat');
 load('el.mat');
 load('bnd.mat');
 load('bnd2.mat');
 load('bnd3.mat');
 
-
 %loading Mesh
 load('EToV.mat');
 load('VX.mat');
+
 
 
 zz_max(1:54916)=1.22;
@@ -24,7 +22,7 @@ for i=1:244
 
     aa=el(i);
 
-    zz_max(aa)=s_100(i);
+    zz_max(aa)=s_500(i);
 
 end
 

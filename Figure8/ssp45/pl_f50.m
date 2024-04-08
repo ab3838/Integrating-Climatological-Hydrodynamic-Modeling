@@ -2,8 +2,8 @@ clear
 close all
 clc
 
-addpath(genpath('/home/ab3838/Matlab_export_pack/altmany-export_fig-b32040d/'))
 
+%loading data
 
 load('s_50.mat');
 load('el.mat');
@@ -11,10 +11,11 @@ load('bnd.mat');
 load('bnd2.mat');
 load('bnd3.mat');
 
-addpath(genpath('/home/ab3838/Ocean_files/dam_nod/ModNodeADCIRCDG'))
-addpath(genpath('/home/ab3838/Ocean_files/dam_nod/NodalDG'))
 
-[EToV,VX,B,opedat,boudat,gridtitle] = readfort14('fort.14');
+load('EToV.mat');
+load('VX.mat');
+
+
 
 
 zz_max(1:54916)=1.22;
@@ -163,24 +164,6 @@ set(axes1H_f1, 'color', 'w'); % set(gca, 'color', 'none');
     
 set(axes1H_f1, 'XColor', 'k', ...
             'YColor', 'k');     
-
-
-%print(gcf,'ncep437.png','-dpng','-r300');
-
-export_fig(figure1H,'ssp45_sp50.png')
-
-%%%%%%%%%%%%%%%%%%%
-
-% hold on
-% 
-% 
-% xx=[-74.7 -74.9 -74.7 -75.1 -75.3 -75.7 -75.9];
-% yy=[23.3 23.5 23.7 23.9 24.2 24.4 24.7];
-% 
-% 
-% %figure(2)
-% pl_fig5=plot(xx,yy)
-% set(pl_fig5,'LineStyle','-','color','k','LineWidth',3)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
